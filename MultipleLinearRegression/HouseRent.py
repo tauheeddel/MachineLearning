@@ -33,7 +33,7 @@ y = np.array(data['rent amount'])
 print('X', x.shape)
 print('Y', y.shape)
 
-xTrain, xTest, yTrain, yTest = sklearn.model_selection.train_test_split(x,y, test_size=0.1, random_state=0)
+xTrain, xTest, yTrain, yTest = sklearn.model_selection.train_test_split(x,y, test_size=0.2, random_state=0)
 
 print('XTrain', xTrain.shape)
 print('XTest', xTest.shape)
@@ -48,3 +48,13 @@ print('Coefficients: ', model.coef_)
 print('Intercept: ', model.intercept_)
 
 print("Accuracy", round(accuracy*100, 3), "%")
+
+#### EVALUATION ####
+print('-'*30);print(" MANUAL TESTING ");print('-'*30);
+testVals = model.predict(xTest)
+print(testVals.shape)
+
+error = []
+for i,testVal in enumerate(testVals):
+    error.append(yTest[i] - testVal)
+    print(f'Actual: {yTest[i]} Prediction: {int(testVal)} Error {int(error[i])}')
