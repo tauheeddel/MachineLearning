@@ -1,6 +1,6 @@
 import sklearn
-import matplotlib as plt
 import numpy as np
+import matplotlib.pyplot as plt
 
 # F = 1.8*C + 32
 # y = mx + c
@@ -13,3 +13,5 @@ print(f'Y: {y}')
 
 plt.plot(x, y, '-*r')
 plt.show()
+
+
