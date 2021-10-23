@@ -1,3 +1,5 @@
+#Kaggle for data set Brazilian House Rent
+#Data Set: https://www.kaggle.com/rubenssjr/brasilian-houses-to-rent
 import pandas as pd
 from sklearn import preprocessing, linear_model
 import numpy as np
